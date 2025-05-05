@@ -1,0 +1,54 @@
+Firstly need to find the relative Xpath for the given Web elements
+Syntax used to find the Relative Xpath is Partial Text Match and the syntax is: //tagname[contains (text(), 'partial_text)']
+Relative Xpath:
+               Courses: (//a[contains (text(), 'Courses')])[1]   
+               Live Classes: (//p[contains (text(), 'LIVE Classes')])[1]
+               Practice: (//p[contains (text(), 'Practice')])[1]
+               Resources: (//p[contains (text(), 'Resources')])[1]
+               Products: (//p[contains (text(), 'Products')])[1]
+               LogIn: (//a[contains (text(), 'Login')])[1]
+               SignUp: (//a[contains (text(), 'Sign up')])[1]
+
+Parent Elements: Syntax: Xpath/parent::*
+
+               Courses: (//a[contains (text(), 'Courses')])[1]/parent::ul
+               Live Classes: (//p[contains (text(), 'LIVE Classes')])[1]/parent::div
+               Practice: (//p[contains (text(), 'Practice')])[1]/parent::div
+               Resources: (//p[contains (text(), 'Resources')])[1]/parent::div
+               Products: (//p[contains (text(), 'Products')])[1]/parent::div
+               LogIn: (//a[contains (text(), 'Login')])[1]/parent::div
+               SignUp:(//a[contains (text(), 'Sign up')])[1]/parent::div
+
+First Child Element:
+
+               Courses: (//a[contains (text(), 'Courses')])[1]/parent::ul/child::a[1]
+               Live Classes: (//p[contains (text(), 'LIVE Classes')])[1]/parent::div/child::p[1]
+               Practice: (//p[contains (text(), 'Practice')])[1]/parent::div/child::*[1]
+               Resources: (//p[contains (text(), 'Resources')])[1]/parent::div/*[1]
+               Products: (//p[contains (text(), 'Products')])[1]/parent::div/child::div[1]
+               LogIn: (//a[contains (text(), 'Login')])[1]/parent::div/child::div[1]
+               SignUp:(//a[contains (text(), 'Sign up')])[1]/parent::div/child::div[1]
+
+ParentElement that is with href:
+
+               Courses: (//a[@href]/parent::ul)
+
+Ancestor Elements:
+
+               Courses: (//a[contains (text(), 'Courses')])/ancestor::*
+               Live Classes: (//p[contains (text(), 'LIVE Classes')])/ancestor::*
+               Practice: (//p[contains (text(), 'Practice')])/ancestor::*
+               Resources: (//p[contains (text(), 'Resources')])/ancestor::*
+               Products: (//p[contains (text(), 'Products')])/ancestor::*
+               LogIn: (//a[contains (text(), 'Login')])/ancestor::*
+               SignUp: (//a[contains (text(), 'Sign up')])/ancestor::*
+
+Preeceding Elements:
+
+               Courses: (//a[contains (text(), 'Courses')])/preceding::*
+               Live Classes: (//p[contains (text(), 'LIVE Classes')])/preceding::*
+               Practice: (//p[contains (text(), 'Practice')])/preceding::*
+               Resources: (//p[contains (text(), 'Resources')])/preceding::*
+               Products: (//p[contains (text(), 'Products')])/preceding::*
+               LogIn: (//a[contains (text(), 'Login')])/preceding::*
+               SignUp: (//a[contains (text(), 'Sign up')])/preceding::*
